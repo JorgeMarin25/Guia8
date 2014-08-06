@@ -34,7 +34,7 @@ class EngineersController < ApplicationController
     @engineer.proyect_id = @proyect.id
     respond_to do |format|
       if @engineer.save
-        format.html { redirect_to @engineer proyect_engineers_path(@proyect), notice: 'Engineer was successfully created.' }
+        format.html { redirect_to  proyect_engineers_path(@proyect), notice: 'Engineer was successfully created.' }
         format.json { render :show, status: :created, location: @engineer }
       else
         format.html { render :new }
@@ -48,7 +48,7 @@ class EngineersController < ApplicationController
   def update
     respond_to do |format|
       if @engineer.update(engineer_params)
-        format.html { redirect_to @engineer proyect_engineers_path(@proyect), notice: 'Engineer was successfully updated.' }
+        format.html { redirect_to  proyect_engineers_path(@proyect), notice: 'Engineer was successfully updated.' }
         format.json { render :show, status: :ok, location: @engineer }
       else
         format.html { render :edit }
